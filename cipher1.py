@@ -4,21 +4,15 @@
 initial_key = "abcdefghijklmnopqrstuvwxyz "
 
 def write(shift, data):
-    with open(f'results/cipher{shift}.txt', 'w') as file:
+    with open(f'results2/cipher{shift}.txt', 'w') as file:
         new_string = ""
         for letter in data:
-            index = 0
-            if ord(letter) == 32:
-                index = 96 + shift
-            else:
-                index = ord(letter) + shift
-                if index == 123:
-                    index = 32
-                elif index > 123:
-                    index = index -27
-            new_string = new_string + chr(index)
+            index = initial_key.index(letter) + shift
+            if index > 26:
+                index = index - 27
+            decoded = initial_key[index]
+            new_string = new_string + decoded
         file.write(new_string)
-
 
 
         
