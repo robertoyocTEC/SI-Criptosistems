@@ -28,5 +28,5 @@ if __name__ == '__main__':
     print("Llave: ")
     print(key)
 
-    print("Texto Cifrado")
+    print("Texto Cifrado: ")
     print(new_string)
