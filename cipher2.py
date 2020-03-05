@@ -56,6 +56,7 @@ with open('cipher2.txt', 'r') as file:
     new_groups.append("")
     for group in groups:
         letters = Counter(group)
+        print(letters)
 
         new_string = ""
         for letter in group:
